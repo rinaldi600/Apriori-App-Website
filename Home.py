@@ -4,11 +4,9 @@ import numpy as np
 from mlxtend.frequent_patterns import apriori, association_rules
 from st_aggrid import AgGrid
 
-
-def help() :
-    st.write('WORK')
-
-help();
+st.set_page_config(
+    page_title="Apriori Website",
+)
 
 st.title('Apriori')
 st.write('Selamat Datang di Website Pengolahan Data Transaksi Algoritma Apriori')
@@ -58,6 +56,3 @@ if uploadFile is not None :
 
                 st.write(f"Menghasilkan {len(rules)} aturan asosiasi")
                 AgGrid(rules, theme='streamlit')
-
-
-
