@@ -55,4 +55,5 @@ if uploadFile is not None :
                 rules["consequents"] = rules["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
 
                 st.write(f"Menghasilkan {len(rules)} aturan asosiasi")
-                AgGrid(rules, theme='streamlit')
+                st.dataframe(rules);
+                # AgGrid(rules, theme='streamlit')
