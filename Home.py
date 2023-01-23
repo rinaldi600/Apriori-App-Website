@@ -21,11 +21,13 @@ def hot_encode(x):
 
 if uploadFile is not None :
 
+    fileName = uploadFile
+
     support = st.number_input('Masukkan Nilai Support', min_value=0.0, max_value=1.0)
 
     confidence = st.number_input('Masukkan Nilai Confidence', min_value=0.0, max_value=1.0)
 
-    data = pd.read_excel(uploadFile)
+    data = pd.read_excel(fileName)
     st.write(f"Jumlah data transaksi {len(data)} baris")
 
     st.dataframe(data)
