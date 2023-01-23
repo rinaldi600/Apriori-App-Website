@@ -11,7 +11,7 @@ st.set_page_config(
 st.title('Apriori')
 st.write('Selamat Datang di Website Pengolahan Data Transaksi Algoritma Apriori')
 
-uploadFile = st.file_uploader('Upload File Excel Transaksi Penjulalan')
+uploadFile = st.file_uploader('Upload File Excel Transaksi Penjulalan', accept_multiple_files=False)
 
 def hot_encode(x):
     if(x<= 0):
