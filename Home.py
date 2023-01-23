@@ -57,3 +57,5 @@ if uploadFile is not None :
                 st.write(f"Menghasilkan {len(rules)} aturan asosiasi")
                 st.dataframe(rules);
                 # AgGrid(rules, theme='streamlit')
+else :
+    fileName = uploadFile
