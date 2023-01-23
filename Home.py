@@ -58,4 +58,4 @@ if uploadFile is not None :
                 st.dataframe(rules);
                 # AgGrid(rules, theme='streamlit')
 else :
-    fileName = uploadFile
+    fileName = 'Data-Penjualan-Produk - Januari Agustus 2022 - Copy.xlsx'
