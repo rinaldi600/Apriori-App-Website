@@ -53,6 +53,7 @@ if uploadFile is not None :
                 # Collecting the inferred rules in a dataframe
                 rules = association_rules(frq_items, metric ="confidence", min_threshold = confidence)
                 rules = rules.sort_values(['lift','confidence'], ascending =[False, False])
+                rules = rules.drop(columns=['leverage', 'conviction'])
                 rules["antecedents"] = rules["antecedents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
                 rules["consequents"] = rules["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
 
